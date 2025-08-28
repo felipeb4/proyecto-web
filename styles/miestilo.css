@@ -1,2 +1,11 @@
 body { font-family: system-ui, Arial, sans-serif; } 
+.fullscreen {
+  width: 100vw;   /* 100% del ancho de la ventana */
+  height: 100vh;  /* 100% del alto de la ventana */
+  object-fit: cover; /* Ajusta la imagen para que cubra todo */
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
 h1 { text-align: center; } 
