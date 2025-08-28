@@ -1,11 +1,54 @@
-body { font-family: system-ui, Arial, sans-serif; } 
-.fullscreen {
-  width: 100vw;   /* 100% del ancho de la ventana */
-  height: 100vh;  /* 100% del alto de la ventana */
-  object-fit: cover; /* Ajusta la imagen para que cubra todo */
+body {
   margin: 0;
   padding: 0;
-  display: block;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  text-align: center;
 }
 
-h1 { text-align: center; } 
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.mensaje {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.foto {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  margin: 20px 0;
+  animation: zoomIn 2s ease-in-out;
+}
+
+.firma {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
