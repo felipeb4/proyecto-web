@@ -42,8 +42,9 @@ body {
   to { transform: translateX(2000px); }
 }
 
-/* Carrusel */
+/* Carrusel romántico */
 .carousel {
+  position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -52,31 +53,22 @@ body {
   overflow: hidden;
 }
 
-.slides {
-  display: flex;
-  width: 1000%;
-  animation: slide 50s infinite;
+.slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }
 
-.slides img {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+.slide.active {
+  opacity: 1;
 }
 
-/* Animación de pasar fotos */
-@keyframes slide {
-  0%   { transform: translateX(0); }
-  10%  { transform: translateX(-100vw); }
-  20%  { transform: translateX(-200vw); }
-  30%  { transform: translateX(-300vw); }
-  40%  { transform: translateX(-400vw); }
-  50%  { transform: translateX(-500vw); }
-  60%  { transform: translateX(-600vw); }
-  70%  { transform: translateX(-700vw); }
-  80%  { transform: translateX(-800vw); }
-  90%  { transform: translateX(-900vw); }
-  100% { transform: translateX(0); }
+.slide img {
+  width: 60vw;
+  max-width: 600px;
+  border-radius: 20px;
+  border: 8px solid white;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
 
 /* Texto romántico */
@@ -88,7 +80,8 @@ body {
   color: white;
   font-family: 'Brush Script MT', cursive;
   opacity: 0;
-  animation: aparecer 55s forwards;
+  animation: aparecer 5s forwards;
+  animation-delay: 42s; /* aparece después de ~10 fotos (10x4s) */
 }
 
 .mensaje h1 {
@@ -104,4 +97,3 @@ body {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
