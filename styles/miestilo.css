@@ -1,3 +1,4 @@
+body { font-family: system-ui, Arial, sans-serif; }
 body {
   margin: 0;
   padding: 0;
@@ -52,3 +53,14 @@ h1 {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+.fullscreen {
+  width: 100vw;   /* 100% del ancho de la ventana */
+  height: 100vh;  /* 100% del alto de la ventana */
+  object-fit: cover; /* Ajusta la imagen para que cubra todo */
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+h1 { text-align: center; } 
